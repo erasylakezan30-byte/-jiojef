@@ -1,60 +1,396 @@
 <!DOCTYPE html>
-<html lang="kk">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Қолжетімді форма</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IS3B9 Database</title>
 
 <style>
-body {
-  font-family: Arial;
-  background: #f5f5f5;
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f2f2;
+    margin:20px;
 }
 
-form {
-  width: 300px;
-  margin: 50px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 10px;
+h1{
+    text-align:center;
+    margin-bottom:20px;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
+.search-box{
+    text-align:center;
+    margin-bottom:20px;
 }
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+input{
+    width:400px;
+    padding:10px;
+    font-size:16px;
 }
 
-.error {
-  color: red;
-  font-size: 12px;
+.table-container{
+    overflow-x:auto;
+    background:white;
+    padding:10px;
+    border:1px solid #ccc;
 }
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#444;
+    color:white;
+}
+
+th, td{
+    border:1px solid #999;
+    padding:10px;
+    text-align:left;
+    font-size:14px;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
 </style>
 </head>
-
 <body>
 
-<form>
+<h1>IS3B9 SQL TABLE</h1>
 
-  <label for="name">Аты-жөні</label>
-  <input id="name" type="text" aria-describedby="nameError">
-  <div id="nameError" class="error">Аты-жөнін енгізіңіз</div>
+<div class="search-box">
+    <input type="text" id="searchInput" placeholder="Поиск...">
+</div>
 
-  <label for="email">Email</label>
-  <input id="email" type="email" aria-describedby="emailError">
-  <div id="emailError" class="error">Дұрыс email жазыңыз</div>
+<div class="table-container">
 
-  <label for="password">Пароль</label>
-  <input id="password" type="password" aria-describedby="passError">
-  <div id="passError" class="error">Пароль кемінде 6 символ болуы керек</div>
+<table id="dataTable">
 
-  <button type="submit">Жіберу</button>
+<thead>
+<tr>
+    <th>student_id</th>
+    <th>student_name</th>
+    <th>group_name</th>
+    <th>grade_id</th>
+    <th>grade</th>
+    <th>subject_id</th>
+    <th>subject_name</th>
+    <th>teacher_id</th>
+    <th>teacher_name</th>
+</tr>
+</thead>
 
-</form>
+<tbody>
+
+<tr>
+<td>1</td>
+<td>Ануарбек Арда</td>
+<td>ИС3Б9</td>
+<td>1</td>
+<td>90</td>
+<td>1</td>
+<td>Front-end және back-end web-ресурстарын құру</td>
+<td>1</td>
+<td>Әлғайпа Ғ.П.</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Алмасқан Алинұр</td>
+<td>ИС3Б9</td>
+<td>2</td>
+<td>85</td>
+<td>2</td>
+<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Ауызбеков Ерасыл</td>
+<td>ИС3Б9</td>
+<td>3</td>
+<td>78</td>
+<td>3</td>
+<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
+<td>3</td>
+<td>Токенова Ж.М.</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Алтай Алишер</td>
+<td>ИС3Б9</td>
+<td>4</td>
+<td>88</td>
+<td>4</td>
+<td>Ұйымның серверлік жабдықтарын монтаждау</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Әбдікәрім Әкежан</td>
+<td>ИС3Б9</td>
+<td>5</td>
+<td>92</td>
+<td>5</td>
+<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Берік Батыр</td>
+<td>ИС3Б9</td>
+<td>6</td>
+<td>67</td>
+<td>6</td>
+<td>Дене қасиеттерін дамыту және жетілдіру</td>
+<td>4</td>
+<td>Абылкасенов Б.С.</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Дидарқызы Нұрай</td>
+<td>ИС3Б9</td>
+<td>7</td>
+<td>75</td>
+<td>7</td>
+<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>Есімханов Жалғас</td>
+<td>ИС3Б9</td>
+<td>8</td>
+<td>80</td>
+<td>8</td>
+<td>Ұйымның жергілікті есептеу желісін орнату</td>
+<td>5</td>
+<td>Қалқабек Е.М.</td>
+</tr>
+
+<tr>
+<td>9</td>
+<td>Ерболатұлы Ералы</td>
+<td>ИС3Б9</td>
+<td>9</td>
+<td>70</td>
+<td>1</td>
+<td>Front-end және back-end web-ресурстарын құру</td>
+<td>1</td>
+<td>Әлғайпа Ғ.П.</td>
+</tr>
+
+<tr>
+<td>10</td>
+<td>Ерханат Аружан</td>
+<td>ИС3Б9</td>
+<td>10</td>
+<td>95</td>
+<td>2</td>
+<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>11</td>
+<td>Еркінбекұлы Ақжол</td>
+<td>ИС3Б9</td>
+<td>11</td>
+<td>60</td>
+<td>3</td>
+<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
+<td>3</td>
+<td>Токенова Ж.М.</td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Жукоков Мансұр</td>
+<td>ИС3Б9</td>
+<td>12</td>
+<td>85</td>
+<td>4</td>
+<td>Ұйымның серверлік жабдықтарын монтаждау</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>Жұмабек Арна</td>
+<td>ИС3Б9</td>
+<td>13</td>
+<td>77</td>
+<td>5</td>
+<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Қайратұлы Эльдар</td>
+<td>ИС3Б9</td>
+<td>14</td>
+<td>89</td>
+<td>6</td>
+<td>Дене қасиеттерін дамыту және жетілдіру</td>
+<td>4</td>
+<td>Абылкасенов Б.С.</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Миратұлы Әзім</td>
+<td>ИС3Б9</td>
+<td>15</td>
+<td>91</td>
+<td>7</td>
+<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Ришадұлы Нұрдәулет</td>
+<td>ИС3Б9</td>
+<td>16</td>
+<td>68</td>
+<td>8</td>
+<td>Ұйымның жергілікті есептеу желісін орнату</td>
+<td>5</td>
+<td>Қалқабек Е.М.</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Сейтқалиев Алихан</td>
+<td>ИС3Б9</td>
+<td>17</td>
+<td>73</td>
+<td>1</td>
+<td>Front-end және back-end web-ресурстарын құру</td>
+<td>1</td>
+<td>Әлғайпа Ғ.П.</td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Советова Айдана</td>
+<td>ИС3Б9</td>
+<td>18</td>
+<td>84</td>
+<td>2</td>
+<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>Серікова Дильназ</td>
+<td>ИС3Б9</td>
+<td>19</td>
+<td>79</td>
+<td>3</td>
+<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
+<td>3</td>
+<td>Токенова Ж.М.</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Самарбекова Алтынай</td>
+<td>ИС3Б9</td>
+<td>20</td>
+<td>88</td>
+<td>4</td>
+<td>Ұйымның серверлік жабдықтарын монтаждау</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Тұрсынғалиева Алима</td>
+<td>ИС3Б9</td>
+<td>21</td>
+<td>90</td>
+<td>5</td>
+<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Тоқтарбеков Ералы</td>
+<td>ИС3Б9</td>
+<td>22</td>
+<td>76</td>
+<td>6</td>
+<td>Дене қасиеттерін дамыту және жетілдіру</td>
+<td>4</td>
+<td>Абылкасенов Б.С.</td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>Нұрлан Ернұр</td>
+<td>ИС3Б9</td>
+<td>23</td>
+<td>82</td>
+<td>7</td>
+<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
+<td>2</td>
+<td>Әбдіқапар М.</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const table = document.getElementById("dataTable");
+const rows = table.getElementsByTagName("tr");
+
+searchInput.addEventListener("keyup", function(){
+
+    const filter = searchInput.value.toLowerCase();
+
+    for(let i = 1; i < rows.length; i++){
+
+        const text = rows[i].textContent.toLowerCase();
+
+        if(text.includes(filter)){
+            rows[i].style.display = "";
+        }else{
+            rows[i].style.display = "none";
+        }
+    }
+});
+
+</script>
 
 </body>
 </html>

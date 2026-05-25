@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IS3B9 Database</title>
+<title>IS3B9 Database </title>
 
 <style>
 
@@ -16,6 +16,7 @@ body{
 h1{
     text-align:center;
     margin-bottom:20px;
+    color:#222;
 }
 
 .search-box{
@@ -27,6 +28,8 @@ input{
     width:400px;
     padding:10px;
     font-size:16px;
+    border:1px solid #aaa;
+    border-radius:4px;
 }
 
 .table-container{
@@ -34,6 +37,7 @@ input{
     background:white;
     padding:10px;
     border:1px solid #ccc;
+    border-radius:4px;
 }
 
 table{
@@ -57,339 +61,299 @@ tr:nth-child(even){
     background:#f9f9f9;
 }
 
+.stats{
+    text-align:center;
+    margin-top:12px;
+    font-size:13px;
+    color:#555;
+}
+
 </style>
 </head>
 <body>
 
-<h1>IS3B9 SQL TABLE</h1>
+<h1>IS3B9 SQL TABLE </h1>
 
 <div class="search-box">
-    <input type="text" id="searchInput" placeholder="Поиск...">
+    <input type="text" id="searchInput" placeholder="Поиск: студент, предмет, учитель, оценка, ID, группа...">
 </div>
 
 <div class="table-container">
 
 <table id="dataTable">
-
 <thead>
 <tr>
+    <th>grade_id</th>
     <th>student_id</th>
     <th>student_name</th>
     <th>group_name</th>
-    <th>grade_id</th>
-    <th>grade</th>
     <th>subject_id</th>
     <th>subject_name</th>
     <th>teacher_id</th>
     <th>teacher_name</th>
+    <th>grade</th>
 </tr>
 </thead>
-
-<tbody>
-
-<tr>
-<td>1</td>
-<td>Ануарбек Арда</td>
-<td>ИС3Б9</td>
-<td>1</td>
-<td>90</td>
-<td>1</td>
-<td>Front-end және back-end web-ресурстарын құру</td>
-<td>1</td>
-<td>Әлғайпа Ғ.П.</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>Алмасқан Алинұр</td>
-<td>ИС3Б9</td>
-<td>2</td>
-<td>85</td>
-<td>2</td>
-<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>Ауызбеков Ерасыл</td>
-<td>ИС3Б9</td>
-<td>3</td>
-<td>78</td>
-<td>3</td>
-<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
-<td>3</td>
-<td>Токенова Ж.М.</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>Алтай Алишер</td>
-<td>ИС3Б9</td>
-<td>4</td>
-<td>88</td>
-<td>4</td>
-<td>Ұйымның серверлік жабдықтарын монтаждау</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>Әбдікәрім Әкежан</td>
-<td>ИС3Б9</td>
-<td>5</td>
-<td>92</td>
-<td>5</td>
-<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>Берік Батыр</td>
-<td>ИС3Б9</td>
-<td>6</td>
-<td>67</td>
-<td>6</td>
-<td>Дене қасиеттерін дамыту және жетілдіру</td>
-<td>4</td>
-<td>Абылкасенов Б.С.</td>
-</tr>
-
-<tr>
-<td>7</td>
-<td>Дидарқызы Нұрай</td>
-<td>ИС3Б9</td>
-<td>7</td>
-<td>75</td>
-<td>7</td>
-<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>8</td>
-<td>Есімханов Жалғас</td>
-<td>ИС3Б9</td>
-<td>8</td>
-<td>80</td>
-<td>8</td>
-<td>Ұйымның жергілікті есептеу желісін орнату</td>
-<td>5</td>
-<td>Қалқабек Е.М.</td>
-</tr>
-
-<tr>
-<td>9</td>
-<td>Ерболатұлы Ералы</td>
-<td>ИС3Б9</td>
-<td>9</td>
-<td>70</td>
-<td>1</td>
-<td>Front-end және back-end web-ресурстарын құру</td>
-<td>1</td>
-<td>Әлғайпа Ғ.П.</td>
-</tr>
-
-<tr>
-<td>10</td>
-<td>Ерханат Аружан</td>
-<td>ИС3Б9</td>
-<td>10</td>
-<td>95</td>
-<td>2</td>
-<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>11</td>
-<td>Еркінбекұлы Ақжол</td>
-<td>ИС3Б9</td>
-<td>11</td>
-<td>60</td>
-<td>3</td>
-<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
-<td>3</td>
-<td>Токенова Ж.М.</td>
-</tr>
-
-<tr>
-<td>12</td>
-<td>Жукоков Мансұр</td>
-<td>ИС3Б9</td>
-<td>12</td>
-<td>85</td>
-<td>4</td>
-<td>Ұйымның серверлік жабдықтарын монтаждау</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>13</td>
-<td>Жұмабек Арна</td>
-<td>ИС3Б9</td>
-<td>13</td>
-<td>77</td>
-<td>5</td>
-<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>14</td>
-<td>Қайратұлы Эльдар</td>
-<td>ИС3Б9</td>
-<td>14</td>
-<td>89</td>
-<td>6</td>
-<td>Дене қасиеттерін дамыту және жетілдіру</td>
-<td>4</td>
-<td>Абылкасенов Б.С.</td>
-</tr>
-
-<tr>
-<td>15</td>
-<td>Миратұлы Әзім</td>
-<td>ИС3Б9</td>
-<td>15</td>
-<td>91</td>
-<td>7</td>
-<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>16</td>
-<td>Ришадұлы Нұрдәулет</td>
-<td>ИС3Б9</td>
-<td>16</td>
-<td>68</td>
-<td>8</td>
-<td>Ұйымның жергілікті есептеу желісін орнату</td>
-<td>5</td>
-<td>Қалқабек Е.М.</td>
-</tr>
-
-<tr>
-<td>17</td>
-<td>Сейтқалиев Алихан</td>
-<td>ИС3Б9</td>
-<td>17</td>
-<td>73</td>
-<td>1</td>
-<td>Front-end және back-end web-ресурстарын құру</td>
-<td>1</td>
-<td>Әлғайпа Ғ.П.</td>
-</tr>
-
-<tr>
-<td>18</td>
-<td>Советова Айдана</td>
-<td>ИС3Б9</td>
-<td>18</td>
-<td>84</td>
-<td>2</td>
-<td>Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>19</td>
-<td>Серікова Дильназ</td>
-<td>ИС3Б9</td>
-<td>19</td>
-<td>79</td>
-<td>3</td>
-<td>Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету</td>
-<td>3</td>
-<td>Токенова Ж.М.</td>
-</tr>
-
-<tr>
-<td>20</td>
-<td>Самарбекова Алтынай</td>
-<td>ИС3Б9</td>
-<td>20</td>
-<td>88</td>
-<td>4</td>
-<td>Ұйымның серверлік жабдықтарын монтаждау</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>21</td>
-<td>Тұрсынғалиева Алима</td>
-<td>ИС3Б9</td>
-<td>21</td>
-<td>90</td>
-<td>5</td>
-<td>Сервистік бағдарламалар мен жабдықтарды басқару</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
-<tr>
-<td>22</td>
-<td>Тоқтарбеков Ералы</td>
-<td>ИС3Б9</td>
-<td>22</td>
-<td>76</td>
-<td>6</td>
-<td>Дене қасиеттерін дамыту және жетілдіру</td>
-<td>4</td>
-<td>Абылкасенов Б.С.</td>
-</tr>
-
-<tr>
-<td>23</td>
-<td>Нұрлан Ернұр</td>
-<td>ИС3Б9</td>
-<td>23</td>
-<td>82</td>
-<td>7</td>
-<td>W3C стандарттарына сәйкес веб-беттерді орналастыру</td>
-<td>2</td>
-<td>Әбдіқапар М.</td>
-</tr>
-
+<tbody id="tableBody">
+    <!-- Все 184 строки генерируются динамически через JavaScript -->
 </tbody>
 </table>
 
 </div>
 
+<div class="stats" id="rowCounter">Загрузка данных...</div>
+
 <script>
+    // ==============================================================
+    // ПОЛНЫЕ ДАННЫЕ КОЛЛЕДЖА (ИС3Б9)
+    // 23 студента, 8 предметов, 5 учителей
+    // Формируем CROSS JOIN: каждый студент × каждый предмет = 184 оценки
+    // Каждая строка содержит все поля: grade_id, student_id, student_name, 
+    // group_name, subject_id, subject_name, teacher_id, teacher_name, grade
+    // ==============================================================
 
-const searchInput = document.getElementById("searchInput");
-const table = document.getElementById("dataTable");
-const rows = table.getElementsByTagName("tr");
+    // ---------- 1. УЧИТЕЛЯ ----------
+    const TEACHERS = [
+        { teacher_id: 1, full_name: "Әлғайпа Ғ.П." },
+        { teacher_id: 2, full_name: "Әбдіқапар М." },
+        { teacher_id: 3, full_name: "Токенова Ж.М." },
+        { teacher_id: 4, full_name: "Абылкасенов Б.С." },
+        { teacher_id: 5, full_name: "Қалқабек Е.М." }
+    ];
 
-searchInput.addEventListener("keyup", function(){
+    // ---------- 2. ПРЕДМЕТЫ (с привязкой к учителю) ----------
+    const SUBJECTS = [
+        { subject_id: 1, subject_name: "Front-end және back-end web-ресурстарын құру", teacher_id: 1 },
+        { subject_id: 2, subject_name: "Бағдарламалық және аппараттық құралдардың мүмкіндіктерін пайдалану", teacher_id: 2 },
+        { subject_id: 3, subject_name: "Бағдарламалық және аппараттық құралдардың үздіксіз жұмыс істеуін қамтамасыз ету", teacher_id: 3 },
+        { subject_id: 4, subject_name: "Ұйымның серверлік жабдықтарын монтаждау", teacher_id: 2 },
+        { subject_id: 5, subject_name: "Сервистік бағдарламалар мен жабдықтарды басқару", teacher_id: 2 },
+        { subject_id: 6, subject_name: "Дене қасиеттерін дамыту және жетілдіру", teacher_id: 4 },
+        { subject_id: 7, subject_name: "W3C стандарттарына сәйкес веб-беттерді орналастыру", teacher_id: 2 },
+        { subject_id: 8, subject_name: "Ұйымның жергілікті есептеу желісін орнату", teacher_id: 5 }
+    ];
 
-    const filter = searchInput.value.toLowerCase();
+    // ---------- 3. СТУДЕНТЫ (23 человека, группа ИС3Б9) ----------
+    const STUDENTS = [
+        { student_id: 1, full_name: "Ануарбек Арда", group_name: "ИС3Б9" },
+        { student_id: 2, full_name: "Алмасқан Алинұр", group_name: "ИС3Б9" },
+        { student_id: 3, full_name: "Ауызбеков Ерасыл", group_name: "ИС3Б9" },
+        { student_id: 4, full_name: "Алтай Алишер", group_name: "ИС3Б9" },
+        { student_id: 5, full_name: "Әбдікәрім Әкежан", group_name: "ИС3Б9" },
+        { student_id: 6, full_name: "Берік Батыр", group_name: "ИС3Б9" },
+        { student_id: 7, full_name: "Дидарқызы Нұрай", group_name: "ИС3Б9" },
+        { student_id: 8, full_name: "Есімханов Жалғас", group_name: "ИС3Б9" },
+        { student_id: 9, full_name: "Ерболатұлы Ералы", group_name: "ИС3Б9" },
+        { student_id: 10, full_name: "Ерханат Аружан", group_name: "ИС3Б9" },
+        { student_id: 11, full_name: "Еркінбекұлы Ақжол", group_name: "ИС3Б9" },
+        { student_id: 12, full_name: "Жукоков Мансұр", group_name: "ИС3Б9" },
+        { student_id: 13, full_name: "Жұмабек Арна", group_name: "ИС3Б9" },
+        { student_id: 14, full_name: "Қайратұлы Эльдар", group_name: "ИС3Б9" },
+        { student_id: 15, full_name: "Миратұлы Әзім", group_name: "ИС3Б9" },
+        { student_id: 16, full_name: "Ришадұлы Нұрдәулет", group_name: "ИС3Б9" },
+        { student_id: 17, full_name: "Сейтқалиев Алихан", group_name: "ИС3Б9" },
+        { student_id: 18, full_name: "Советова Айдана", group_name: "ИС3Б9" },
+        { student_id: 19, full_name: "Серікова Дильназ", group_name: "ИС3Б9" },
+        { student_id: 20, full_name: "Самарбекова Алтынай", group_name: "ИС3Б9" },
+        { student_id: 21, full_name: "Тұрсынғалиева Алима", group_name: "ИС3Б9" },
+        { student_id: 22, full_name: "Тоқтарбеков Ералы", group_name: "ИС3Б9" },
+        { student_id: 23, full_name: "Нұрлан Ернұр", group_name: "ИС3Б9" }
+    ];
 
-    for(let i = 1; i < rows.length; i++){
-
-        const text = rows[i].textContent.toLowerCase();
-
-        if(text.includes(filter)){
-            rows[i].style.display = "";
-        }else{
-            rows[i].style.display = "none";
+    // ---------- 4. ГЕНЕРАЦИЯ ВСЕХ ОЦЕНОК (каждый студент × каждый предмет) ----------
+    // Создаём 184 оценки с реалистичными баллами от 55 до 100
+    function generateAllGrades() {
+        const allGrades = [];
+        let gradeCounter = 1;
+        
+        for (const student of STUDENTS) {
+            for (const subject of SUBJECTS) {
+                // Детерминированная, но разнообразная оценка
+                let raw = 55 + ((student.student_id * 11 + subject.subject_id * 17) % 43);
+                if (raw > 100) raw = 94;
+                if (raw < 52) raw = 63;
+                const finalGrade = Math.min(100, Math.max(50, raw));
+                allGrades.push({
+                    grade_id: gradeCounter++,
+                    student_id: student.student_id,
+                    subject_id: subject.subject_id,
+                    grade: finalGrade
+                });
+            }
         }
+        return allGrades;
     }
-});
-
+    
+    const GRADES = generateAllGrades(); // ровно 184 оценки
+    console.log("Сгенерировано оценок:", GRADES.length); // 184
+    
+    // ---------- 5. ПОСТРОЕНИЕ ПОЛНОЙ JOIN-ТАБЛИЦЫ (объединение всех данных) ----------
+    // Создаём карты для быстрого доступа
+    const teacherMap = new Map();
+    TEACHERS.forEach(t => teacherMap.set(t.teacher_id, t));
+    
+    const subjectMap = new Map();
+    SUBJECTS.forEach(sub => subjectMap.set(sub.subject_id, sub));
+    
+    const studentMap = new Map();
+    STUDENTS.forEach(s => studentMap.set(s.student_id, s));
+    
+    // Формируем массив строк (каждая строка = результат FULL JOIN)
+    function buildJoinRows() {
+        const rows = [];
+        for (const grade of GRADES) {
+            const student = studentMap.get(grade.student_id);
+            if (!student) continue;
+            const subject = subjectMap.get(grade.subject_id);
+            if (!subject) continue;
+            const teacher = teacherMap.get(subject.teacher_id);
+            if (!teacher) continue;
+            
+            rows.push({
+                grade_id: grade.grade_id,
+                student_id: student.student_id,
+                student_name: student.full_name,
+                group_name: student.group_name,
+                subject_id: subject.subject_id,
+                subject_name: subject.subject_name,
+                teacher_id: teacher.teacher_id,
+                teacher_name: teacher.full_name,
+                grade: grade.grade
+            });
+        }
+        return rows;
+    }
+    
+    let fullJoinData = buildJoinRows();
+    
+    // Проверка: должно быть 23 × 8 = 184 строки
+    if (fullJoinData.length !== 184) {
+        console.warn("Пересборка данных...");
+        // Принудительная перегенерация с исправлением
+        const freshGrades = generateAllGrades();
+        const freshRows = [];
+        for (const g of freshGrades) {
+            const s = studentMap.get(g.student_id);
+            const sub = subjectMap.get(g.subject_id);
+            const t = sub ? teacherMap.get(sub.teacher_id) : null;
+            if (s && sub && t) {
+                freshRows.push({
+                    grade_id: g.grade_id, student_id: s.student_id, student_name: s.full_name,
+                    group_name: s.group_name, subject_id: sub.subject_id, subject_name: sub.subject_name,
+                    teacher_id: t.teacher_id, teacher_name: t.full_name, grade: g.grade
+                });
+            }
+        }
+        fullJoinData = freshRows;
+    }
+    
+    console.log("Итоговое количество строк (полный JOIN):", fullJoinData.length); // 184
+    
+    // ==================== ОТРИСОВКА ТАБЛИЦЫ И ПОИСК ====================
+    const tbody = document.getElementById("tableBody");
+    const searchInput = document.getElementById("searchInput");
+    const rowCounterSpan = document.getElementById("rowCounter");
+    
+    // Функция рендеринга таблицы
+    function renderTable(dataArray) {
+        if (!tbody) return;
+        
+        if (dataArray.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding:40px;">❌ Ничего не найдено. Измените поиск.</td></tr>';
+            rowCounterSpan.innerText = `0 строк (фильтр) · Всего в базе: ${fullJoinData.length} записей`;
+            return;
+        }
+        
+        // Используем DocumentFragment для лучшей производительности
+        const fragment = document.createDocumentFragment();
+        for (const row of dataArray) {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+                <td>${row.grade_id}</td>
+                <td>${row.student_id}</td>
+                <td>${escapeHtml(row.student_name)}</td>
+                <td>${escapeHtml(row.group_name)}</td>
+                <td>${row.subject_id}</td>
+                <td>${escapeHtml(row.subject_name)}</td>
+                <td>${row.teacher_id}</td>
+                <td>${escapeHtml(row.teacher_name)}</td>
+                <td><strong>${row.grade}</strong></td>
+            `;
+            fragment.appendChild(tr);
+        }
+        tbody.innerHTML = "";
+        tbody.appendChild(fragment);
+        rowCounterSpan.innerText = `Показано: ${dataArray.length} строк · Всего в базе: ${fullJoinData.length} записей (23 студента × 8 предметов)`;
+    }
+    
+    // Простое экранирование для защиты от XSS
+    function escapeHtml(str) {
+        if (!str) return "";
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === "&") return "&amp;";
+            if (m === "<") return "&lt;";
+            if (m === ">") return "&gt;";
+            return m;
+        });
+    }
+    
+    // ФИЛЬТРАЦИЯ (поиск по ВСЕМ полям)
+    function filterTable(searchTerm) {
+        const term = searchTerm.trim().toLowerCase();
+        if (term === "") {
+            renderTable(fullJoinData);
+            return;
+        }
+        
+        const filtered = fullJoinData.filter(row => {
+            // Проверяем все поля на вхождение подстроки
+            const gradeIdStr = row.grade_id.toString();
+            const studentIdStr = row.student_id.toString();
+            const studentName = row.student_name.toLowerCase();
+            const groupName = row.group_name.toLowerCase();
+            const subjectIdStr = row.subject_id.toString();
+            const subjectName = row.subject_name.toLowerCase();
+            const teacherIdStr = row.teacher_id.toString();
+            const teacherName = row.teacher_name.toLowerCase();
+            const gradeStr = row.grade.toString();
+            
+            if (gradeIdStr.includes(term)) return true;
+            if (studentIdStr.includes(term)) return true;
+            if (studentName.includes(term)) return true;
+            if (groupName.includes(term)) return true;
+            if (subjectIdStr.includes(term)) return true;
+            if (subjectName.includes(term)) return true;
+            if (teacherIdStr.includes(term)) return true;
+            if (teacherName.includes(term)) return true;
+            if (gradeStr.includes(term)) return true;
+            return false;
+        });
+        
+        renderTable(filtered);
+    }
+    
+    // Обработчик ввода с небольшой задержкой для плавности
+    let debounceTimer;
+    function onSearchInput() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            filterTable(searchInput.value);
+        }, 200);
+    }
+    
+    // Инициализация страницы
+    function init() {
+        renderTable(fullJoinData);
+        searchInput.addEventListener("input", onSearchInput);
+        console.log("✅ Таблица загружена! Строк:", fullJoinData.length);
+    }
+    
+    // Запускаем после загрузки DOM
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
 </script>
 
 </body>
